@@ -4,24 +4,24 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
-    {
-        [TestMethod]
-        public void TestMethod1()
+    class Military
         {
-           // Fought();
-            //Military.Fought();
-           // UnitTestProject1.Military.Fought();
-
-            //Mi
-
-            //Mil.Fought();
-
+            [TestMethod]
+            public void Deploy(string TimeToDeploy)
+            {
+                Console.WriteLine($"Begin Deployment: {TimeToDeploy}");
+            }
+            [TestMethod]
+            public void ComeHome(string TimeToComeHome)
+            {
+                Console.WriteLine($"\nTime to come home from Deployment: {TimeToComeHome}");
+            }
+            [TestMethod]
+            public virtual void Fought()
+            {
+                Console.WriteLine("Default implementation of the Fight method");
+            }
         }
 
-        private void Fought()
-        {
-            throw new NotImplementedException();
-        }
     }
-}
+
